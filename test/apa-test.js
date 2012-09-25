@@ -75,6 +75,19 @@ describe('apa',function(){
 				done();
 			});
 		});
+		it('should send the request with all parameters correctly escaped',function(done){
+			var client = apa.createClient(privateOptions);
+			client.execute('ItemSearch',{
+			    SearchIndex : 'All',
+			    Keywords : 'TV\'s Plasma!',
+			    ResponseGroup : 'OfferFull,Images,ItemAttributes,SalesRank,EditorialReview',
+			    Availability : 'Available'
+			},function(err,data){
+				assert.notInstanceOf(err,Error);
+				assert.isObject(data);
+				done();
+			});
+		});
 	});
 	describe('#switchLocale("fr")',function(){
 		it('should change the endpoint with the tld fr',function(){
