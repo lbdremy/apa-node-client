@@ -77,7 +77,7 @@ describe('apa',function(){
 		});
 	});
 	describe('#switchLocale("fr")',function(){
-		it('should change the endpoint with the locale fr',function(){
+		it('should change the endpoint with the tld fr',function(){
 			var client = apa.createClient({
 				awsAccessKeyId : 'AKIAIOSFODNN7EXAMPLE',
 				awsSecretKey : '1234567890',
@@ -100,6 +100,17 @@ describe('apa',function(){
 				assert.isObject(data);
 				done();
 			});
+		});
+	});
+	describe('#switchLocale("uk")',function(){
+		it('should change the endpoint the tld co.uk',function(){
+			var client = apa.createClient({
+				awsAccessKeyId : 'AKIAIOSFODNN7EXAMPLE',
+				awsSecretKey : '1234567890',
+				associateTag : 'companyXdb'
+			});
+			client.switchLocale('uk');
+			assert.equal(client.endpoint,'ecs.amazonaws.co.uk');
 		});
 	});
 })
