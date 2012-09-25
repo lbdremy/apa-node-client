@@ -1,0 +1,28 @@
+{
+  "name": "apa-client",
+  "version": "0.0.0",
+  "description": "An Amazon Product Advertising API client.",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha -R spec -t 6000 test/*-test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lbdremy/apa-node-client"
+  },
+  "keywords": [
+    "amazon",
+    "product",
+    "advertising",
+    "client"
+  ],
+  "author": "Rémy Loubradou <remyloubradou@gmail.com>",
+  "license": "MIT",
+  "dependencies" : {
+    "xml2js" : "0.1.x"
+  },
+  "devDependencies" : {
+    "mocha" : "*",
+    "chai" : "*"
+  }
+}
