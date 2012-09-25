@@ -11,7 +11,7 @@ npm install apa-client
 ##Features
 - All operations with `Client#execute()`
 - Switch the locale with `Client#swithLocale()`
-- Gracelly handle errors from the XMLParser, http request and specific APA API errors by always passing an `Error` has first argument in the callback.
+- Handle gracefully errors from the XMLParser, http request and specific APA API errors by always passing an `Error` has first argument in the callback.
 
 ##Usage
 
