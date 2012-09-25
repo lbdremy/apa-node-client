@@ -26,8 +26,8 @@ var client = apa.createClient({
 	"associateTag" : "" // your associate tag here
 });
 
-// Switch locale
-client.switchLocale('fr');
+// Switch locale (default endpoint is ecs.amazonaws.com)
+client.switchLocale('fr'); // new endpoint is ecs.amazonaws.fr
 
 // Execute 'ItemSearch' operation with few arguments
 client.execute('ItemSearch',{
@@ -50,4 +50,4 @@ npm test
 
 ##Licence
 (The MIT License)
-Copyright 2011-2012 HipSnip Limited
+Copyright 2012 HipSnip Limited
