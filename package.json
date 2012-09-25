@@ -1,6 +1,6 @@
 {
   "name": "apa-client",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "An Amazon Product Advertising API client.",
   "main": "index.js",
   "scripts": {
